@@ -1,16 +1,31 @@
 import React from 'react';
 import './App.css';
-import Login from './components/Login';
-import Editor from './components/Editor';
-import Diagram from './components/Diagram';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import SignUpForm from './components/SignUpForm';
+import LogInForm from './components/LogInForm';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
-    <div className="App">
-      <Login />
-      <Editor />
-      <Diagram />
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/signup">Sign Up</Link>
+            </li>
+            <li>
+              <Link to="/login">Log In</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <Routes>
+        <Route path="/signup" element={<SignUpForm />} />
+        <Route path="/login" element={<LogInForm />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 }
 
