@@ -1,3 +1,4 @@
+import React from 'react';
 import Editor from './Editor';
 import Diagram from './Diagram';
 
@@ -8,6 +9,6 @@ const Dashboard = () => {
       <Diagram />
     </div>
   );
-}
+};
 
 export default Dashboard;
