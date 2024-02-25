@@ -32,7 +32,7 @@ function Editor() {
         const monaco = await import('monaco-editor');
 
         if (selectedLanguage === 'javascript') {
-            await import('monaco-editor/esm/vs/basic-languages/wgsl/wgsl.contribution.js');
+            await import('monaco-editor/esm/vs/basic-languages/javascript/javascript.contribution');
         } else if (selectedLanguage === 'python') {
             await import('monaco-editor/esm/vs/basic-languages/python/python.contribution');
         } else if (selectedLanguage === 'java') {
